@@ -21,6 +21,13 @@
         // Receive Message from Backend
         cliente.on('mensaje', function( payload ){
             console.log('Escuchando: ', payload);
+        });
+        cliente.on('emitir-mensaje', function( payload ){
+            console.log('Escuchando: ', payload);
+        });
+        cliente.on('active-bands', function(payload){
+            console.clear();
+            console.table(payload);
         })
     </script>
 </body>
